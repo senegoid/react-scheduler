@@ -114,7 +114,7 @@ const MonthEvents = ({
               onViewMore(event.start);
             }}
           >
-            {`${Math.abs(todayEvents.length - i)} More...`}
+            {`+ ${Math.abs(todayEvents.length - i)} eventos...`}
           </Typography>
         ) : (
           <div
