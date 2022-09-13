@@ -61,7 +61,7 @@ const Navigation = () => {
       {renderDateSelector()}
       <div>
         <Button onClick={() => handleState(new Date(), "selectedDate")}>
-          Today
+          Hoje
         </Button>
         {views.length > 1 &&
           (isDesktop ? (
@@ -75,7 +75,7 @@ const Navigation = () => {
                   handleState(v, "view");
                 }}
               >
-                {v}
+                {v === 'month' ? 'mês': v === 'week' ? 'semana' : 'dia'}
               </Button>
             ))
           ) : (
@@ -113,7 +113,8 @@ const Navigation = () => {
                         handleState(v, "view");
                       }}
                     >
-                      {v}
+                      {v === 'month' ? 'mês': v === 'week' ? 'semana' : 'dia'}
+                      
                     </MenuItem>
                   ))}
                 </MenuList>
