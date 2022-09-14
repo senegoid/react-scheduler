@@ -36,6 +36,7 @@ const AppState = ({ initial, children }: AppProps) => {
     loading,
     onEventDrop,
     selectedDate,
+    onConfirm,
   } = initial;
   const [state, dispatch] = useReducer(stateReducer, initialState(initial));
 
@@ -60,6 +61,7 @@ const AppState = ({ initial, children }: AppProps) => {
         locale,
         direction,
         loading,
+        onConfirm,
       });
     } else {
       handleState(true, "mounted");
